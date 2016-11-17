@@ -1,6 +1,12 @@
 language: node_js
 node_js:
   - '0.10'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
 before_install:
-  - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'kata-calc' ]; then cd .. && eval "mv $currentfolder kata-calc" && cd kata-calc; fi
+  - 'currentfolder=${PWD##*/}'
+  - >-
+    if [ "$currentfolder" != 'kata-calc' ]; then cd .. && eval "mv
+    $currentfolder kata-calc" && cd kata-calc; fi
